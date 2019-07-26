@@ -1,6 +1,8 @@
 package com.hand.conntroller;
 
+import com.hand.model.Customer;
 import com.hand.model.Film;
+import com.hand.service.CustomerService;
 import com.hand.service.FilmService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -54,5 +56,22 @@ public class Testcontroller {
         film.setFilmId((short)tt);
         int id = filmService.delete(film);
         return tt;
+    }
+    @GetMapping("/select1")
+    public Customer select1(){
+
+        return  null;
+    }
+    @RequestMapping("/addfail")
+    public  String addfail(){
+
+        String  fail="登录失败！！！";
+        return fail;
+    }
+    @RequestMapping("/addsuccess")
+    public  String addsuccess(){
+
+        String  success="登录成功！！！";
+        return success;
     }
 }
